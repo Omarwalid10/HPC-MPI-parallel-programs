@@ -11,13 +11,13 @@ following two methods, then compare the execution times of both programs:
   Output
 - Count of prime numbers occurring between x and y.
   Parallelization Scenario
-  MasterProcess:
+  ### MasterProcess:
 - Calculate the subrange size r = (y ‐ x) / p (if including master) or (y ‐ x) / (p - 1)
   processes (without master).
 - Broadcast x and r to each slave process using MPI_Bcast (or loop of MPI_Send).
 - Receive sub-count from each slave process using MPI_Reduce (or loop of MPI_Recv).
 - Print total count of primes between x and y.
-  Slave Process:
+  ### Slave Process:
 - Receive x and r through the MPI_Bcast call (or MPI_Recv).
 - Calculate the lower bound a, and upper bound b according to its rank.
 - Count primes in its subrange (between a and b).
