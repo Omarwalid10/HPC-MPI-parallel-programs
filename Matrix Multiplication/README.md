@@ -8,9 +8,11 @@ from a file.
 Note: Must use dynamic allocation.
 
 - Example:
+- 
   Welcome to vector Matrix multiplication program!
   To read dimensions and values from file press 1
   To read dimensions and values from console press 2
+  
   2
   Please enter dimensions of the first matrix: 3 2
   Please enter its elements:
